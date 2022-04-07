@@ -1,0 +1,3 @@
+C:\dev\WixTesting\WixTest\bin\Debug\cab1.cab
+C:\dev\WixTesting\WixTest\bin\Debug\WixTest.msi
+C:\dev\WixTesting\WixTest\bin\Debug\WixTest.wixpdb

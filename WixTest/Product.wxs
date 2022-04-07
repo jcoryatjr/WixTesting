@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="WixTest" Language="1033" Version="1.0.0.0" Manufacturer="Test Mfg" UpgradeCode="011c5d4b-8b3d-44b5-93df-ff03d0548734">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="WixTest" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+
+    <Binary Id="VSLocator" SourceFile="..\VSLocator\bin\debug\VSLocator.CA.dll"/>
+    <CustomAction Id="VSFindInstances2" BinaryKey="VSLocator" DllEntry="VSFindInstances2" Execute="firstSequence"/>
+
+    <InstallUISequence>
+      <Custom Action="VSFindInstances2" After="VSFindInstances"></Custom>
+    </InstallUISequence>
+
+    <InstallExecuteSequence>
+      <Custom Action="VSFindInstances2" After="VSFindInstances"></Custom>
+    </InstallExecuteSequence>
+
+  </Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="WixTest" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			 <Component Id="ProductComponent">
+         <File Id="testfile" Source="..\VSLocator\bin\debug\VSLocator.CA.dll" KeyPath="yes"/>
+			 </Component> 
+		</ComponentGroup>
+	</Fragment>
+</Wix>

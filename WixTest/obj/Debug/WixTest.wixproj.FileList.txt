@@ -1,0 +1,9 @@
+C:\dev\ExchangePlatform2\sources\Setup\SPX\WixTest\bin\Debug\WixTest.msi
+C:\dev\ExchangePlatform2\sources\Setup\SPX\WixTest\bin\Debug\WixTest.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\WixTest.wixproj.BindContentsFileListnull.txt
+obj\Debug\WixTest.wixproj.BindOutputsFileListnull.txt
+obj\Debug\WixTest.wixproj.BindBuiltOutputsFileListnull.txt
+C:\dev\WixTesting\WixTest\bin\Debug\WixTest.msi
+C:\dev\WixTesting\WixTest\bin\Debug\WixTest.wixpdb
+C:\dev\WixTesting\WixTest\bin\Debug\cab1.cab
